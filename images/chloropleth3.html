@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "stroke": null}, "legend": {"labelColor": "white", "labelFontSize": 14, "titleColor": "white"}, "title": {"anchor": "middle", "color": "white", "fontSize": 22}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@v1.29.0/data/us-10m.json", "format": {"feature": "states", "type": "topojson"}}, "mark": "geoshape", "background": "#272b2e", "encoding": {"color": {"field": "machine_learning", "legend": {"title": "Job titles"}, "type": "quantitative"}, "tooltip": [{"field": "state", "type": "nominal"}, {"field": "machine_learning", "type": "quantitative"}]}, "height": 450, "projection": {"type": "albersUsa"}, "title": "A chroropleth map of machine learning job titles per state", "transform": [{"lookup": "id", "from": {"data": {"name": "data-ae5da510a9dc31372442ed3eed58eeb6"}, "key": "id", "fields": ["state", "machine_learning"]}}], "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-ae5da510a9dc31372442ed3eed58eeb6": [{"state": "Alabama", "id": 1, "data_analysis": 0, "data_science": 1, "machine_learning": 0}, {"state": "Arkansas", "id": 5, "data_analysis": 5, "data_science": 2, "machine_learning": 0}, {"state": "California", "id": 6, "data_analysis": 0, "data_science": 0, "machine_learning": 14}, {"state": "Colorado", "id": 8, "data_analysis": 0, "data_science": 2, "machine_learning": 2}, {"state": "Illinois", "id": 17, "data_analysis": 0, "data_science": 8, "machine_learning": 2}, {"state": "Indiana", "id": 18, "data_analysis": 0, "data_science": 3, "machine_learning": 0}, {"state": "Kansas", "id": 20, "data_analysis": 4, "data_science": 1, "machine_learning": 0}, {"state": "Massachusetts", "id": 25, "data_analysis": 0, "data_science": 0, "machine_learning": 3}, {"state": "Maryland", "id": 24, "data_analysis": 0, "data_science": 0, "machine_learning": 3}, {"state": "Michigan", "id": 26, "data_analysis": 0, "data_science": 0, "machine_learning": 1}, {"state": "Minnesota", "id": 27, "data_analysis": 0, "data_science": 3, "machine_learning": 0}, {"state": "Missouri", "id": 29, "data_analysis": 2, "data_science": 0, "machine_learning": 0}, {"state": "Nebraska", "id": 31, "data_analysis": 2, "data_science": 0, "machine_learning": 0}, {"state": "New York", "id": 36, "data_analysis": 0, "data_science": 0, "machine_learning": 4}, {"state": "Oklahoma", "id": 40, "data_analysis": 5, "data_science": 1, "machine_learning": 0}, {"state": "Tennessee", "id": 47, "data_analysis": 0, "data_science": 0, "machine_learning": 1}, {"state": "Texas", "id": 48, "data_analysis": 1, "data_science": 8, "machine_learning": 6}, {"state": "Washington", "id": 53, "data_analysis": 0, "data_science": 0, "machine_learning": 2}, {"state": "Wisconsin", "id": 55, "data_analysis": 0, "data_science": 2, "machine_learning": 0}, {"state": "Alaska", "id": 2, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Arizona", "id": 4, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Connecticut", "id": 9, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Delaware", "id": 10, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "District of Columbia", "id": 11, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Florida", "id": 12, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Georgia", "id": 13, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Hawaii", "id": 15, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Idaho", "id": 16, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Iowa", "id": 19, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Kentucky", "id": 21, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Louisiana", "id": 22, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Maine", "id": 23, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Mississippi", "id": 28, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Montana", "id": 30, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Nevada", "id": 32, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "New Hampshire", "id": 33, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "New Jersey", "id": 34, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "New Mexico", "id": 35, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "North Carolina", "id": 37, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "North Dakota", "id": 38, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Ohio", "id": 39, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Oregon", "id": 41, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Pennsylvania", "id": 42, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Rhode Island", "id": 44, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "South Carolina", "id": 45, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "South Dakota", "id": 46, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Utah", "id": 49, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Vermont", "id": 50, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Virginia", "id": 51, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "West Virginia", "id": 54, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Wyoming", "id": 56, "data_analysis": 0, "data_science": 0, "machine_learning": 0}, {"state": "Puerto Rico", "id": 72, "data_analysis": 0, "data_science": 0, "machine_learning": 0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

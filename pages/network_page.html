@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Website</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		.cell {
+			height: 100vh;
+			width: 100%;
+			display: flex;
+			flex-direction: row; /* new */
+			justify-content: flex-start; 
+			align-items: center;
+            padding: 0;
+            margin: 0;
+            background-color: #272b2e;
+        }
+		.cell:nth-child(1) {
+			background-color: #67615b; 
+		}
+        iframe {
+			display: block;
+			max-height: 100vh;
+			max-width: 100%;
+			object-fit: contain;
+			object-position: center;
+            border: none;
+            outline: none;
+		}
+        .text-container {
+			width: 40%; /* new */
+			padding: 1rem;
+			color: white;
+			font-size: 1.2rem;
+			font-family: Arial;
+        }
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 50px;
+            padding: 1rem;
+            background-color: #272b2e;
+            font-size: 20px;
+            font-family: Arial;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .navbar a:hover {
+        background-color: #555;
+        } 
+	</style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="../index.html">All Visualizations</a>
+    </div> 
+	<div class="cell">
+		<iframe src="../images/my_network.html" style="width: 70%; height: 110%; margin: 0; padding: 0;"></iframe>
+        <div class="text-container">
+            <h2>Some Text Here</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet consequat ipsum, in iaculis tortor dictum a. Nam auctor tortor nec erat semper, et pretium elit sodales.</p>
+        </div>
+    </div>
+</body>
+</html>
