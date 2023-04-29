@@ -3,17 +3,37 @@
 <head>
 	<title>My Website</title>
 	<style>
-        table, th, td {
-  height: 500px;
-  width: 500px;
-  text-align: center;
-  border: 80px solid #272b2e;
-}
 		body {
 			margin: 0;
 			padding: 0;
 		}
-       
+		.cell {
+			height: 100vh;
+			width: 100%;
+			display: flex;
+			flex-direction: row; /* new */
+			justify-content: flex-start; 
+			align-items: center;
+            padding: 0;
+            margin: 0;
+            background-color: #272b2e;
+        }
+        iframe {
+			display: block;
+			max-height: 100vh;
+			max-width: 100%;
+			object-fit: contain;
+			object-position: center;
+            border: none;
+            outline: none;
+		}
+        .text-container {
+			width: 35%; /* new */
+			padding: 10rem;
+			color: white;
+			font-size: 1.2rem;
+			font-family: Arial;
+        }
         .navbar {
             display: flex;
             justify-content: flex-end;
@@ -34,31 +54,6 @@
         .navbar a:hover {
         background-color: #555;
         } 
-
-		table {
-			width: 100%;
-			height: 90vh;
-			table-layout: fixed;
-			border-collapse: collapse;
-			padding: 0;
-			margin: 0;
-		}
-
-		td {
-			padding: 1rem;
-			height: 100%;
-			vertical-align: top;
-		}
-
-		iframe {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  object-fit: cover;
-  box-sizing: border-box;
-  border: none
-} 
 	</style>
 </head>
 <body>
@@ -66,35 +61,43 @@
         <a href="../index.html">All Visualizations</a>
     </div> 
 
-	<table>
-		<tr>
-			<td>
-                <iframe src="../images/tree_map1.html" style="width: 100%; height: 100%;"></iframe>
-			</td>
-			<td style="background-color:#272b2e; text-align: center; vertical-align: middle; color: white; font-family: Arial">
-                <p>This is the text content that goes in the right column.</p>
-            </td>
-		</tr>
-	</table>
-    <table>
-		<tr>
-			<td>
-                <iframe src="../images/tree_map2.html" style="width: 100%; height: 100%;"></iframe>
-			</td>
-			<td style="background-color:#272b2e; text-align: center; vertical-align: middle; color: white; font-family: Arial">
-                <p>This is the text content that goes in the right column.</p>
-            </td>
-		</tr>
-	</table>
-    <table>
-		<tr>
-			<td>
-                <iframe src="../images/tree_map3.html" style="width: 100%; height: 100%;"></iframe>
-			</td>
-			<td style="background-color:#272b2e; text-align: center; vertical-align: middle; color: white; font-family: Arial">
-                <p>This is the text content that goes in the right column.</p>
-            </td>
-		</tr>
-	</table>
+	<div class="cell">
+		<iframe src="../images/tree_map1.html" style="width: 60%; height: 110%; margin: 0; padding: 50px 0 50px 100px;"></iframe>
+        <div class="text-container">
+            <h2>Some Text Here</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Integer imperdiet consequat ipsum, in iaculis tortor dictum a.
+                 Nam auctor tortor nec erat semper, et pretium elit sodales.
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                 Integer imperdiet consequat ipsum, in iaculis tortor dictum a.
+                  Nam auctor tortor nec erat semper, et pretium elit sodales</p>
+        </div>
+    </div>
+
+    <div class="cell">
+		<iframe src="../images/tree_map2.html" style="width: 60%; height: 110%; margin: 0; padding: 50px 0 50px 100px;"></iframe>
+        <div class="text-container">
+            <h2>Some Text Here</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Integer imperdiet consequat ipsum, in iaculis tortor dictum a.
+                 Nam auctor tortor nec erat semper, et pretium elit sodales.
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                 Integer imperdiet consequat ipsum, in iaculis tortor dictum a.
+                  Nam auctor tortor nec erat semper, et pretium elit sodales</p>
+        </div>
+    </div>
+
+    <div class="cell">
+		<iframe src="../images/tree_map3.html" style="width: 60%; height: 110%; margin: 0; padding: 50px 0 50px 100px;"></iframe>
+        <div class="text-container">
+            <h2>Some Text Here</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Integer imperdiet consequat ipsum, in iaculis tortor dictum a.
+                 Nam auctor tortor nec erat semper, et pretium elit sodales.
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                 Integer imperdiet consequat ipsum, in iaculis tortor dictum a.
+                  Nam auctor tortor nec erat semper, et pretium elit sodales</p>
+        </div>
+    </div>
 </body>
 </html>
