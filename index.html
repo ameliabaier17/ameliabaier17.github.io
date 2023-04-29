@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  border: 8px solid #272b2e;
+}
+body {
+    background-color: #272b2e;
+  }
+.cell {
+			height: 90vh;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+.cell:nth-child(1) {
+    background-color: #272b2e; 
+    }
+.cell:nth-child(2) {
+    background-color: #67615b; 
+    }
+
+iframe {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+  border: none
+} 
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.tooltip img {
+  transition: opacity 0.5s ease-in-out;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.tooltip:hover img {
+  opacity: 0.7;
+}
+
+.tooltip:hover::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -50px; /* adjust this value to change the width of the tooltip */
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+  z-index: 1;
+}
+
+.tooltip:hover::after {
+  content: "Click to see more";
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 5px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+</style>
+</head>
+<body>
+
+</div>
+<div class="cell" style="font-size: 2em; text-align: center;">TITLE PAGE
+</div> 
+
+</div>
+<div class="cell" style="font-size: 2em; text-align: center;">TITLE PAGE
+</div> 
+
+<table style="width:100%">
+    <tr>
+        <td class="tooltip">
+          <a href="/pages/donut_page.html">
+            <img src="../images/bubble.png" style="max-width: 100%; max-height: auto;">
+          </a>
+        </td>
+        <td class="tooltip">
+          <a href="/pages/donut_page.html">
+            <img src="../images/donut.png" style="max-width: 100%; max-height: auto;">
+          </a>
+        </td>
+      </tr>
+
+      
+
+      <tr>
+        <td class="tooltip">
+          <a href="https://georgetown.campusgroups.com/login_only?redirect=https%3a%2f%2fgeorgetown.campusgroups.com%2fgroups">
+            <img src="../images/treemap.png" style="max-width: 100%; max-height: auto;">
+          </a>
+        </td>
+        <td class="tooltip">
+          <a href="https://www.example.com">
+            <img src="../images/sankey.png" style="max-width: 100%; max-height: auto;">
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="tooltip">
+          <a href="https://georgetown.campusgroups.com/login_only?redirect=https%3a%2f%2fgeorgetown.campusgroups.com%2fgroups">
+            <img src="../images/chlor.png" style="max-width: 100%; max-height: auto;">
+          </a>
+        </td>
+        <td class="tooltip">
+          <a href="https://www.example.com">
+            <img src="../images/network.png" style="max-width: 100%; max-height: auto;">
+          </a>
+        </td>
+      </tr>
+
+</table>
+
+</body>
+</html>
