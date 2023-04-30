@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<!-- <head>
+  <style>
+  #my_dataviz {
+    width: 100%;
+    height: 100vh;
+  }
+  </style>
+  </head> -->
 <meta charset="utf-8">
 
 <!-- Load d3.js -->
@@ -10,37 +18,118 @@
 <script>
 
   // set the dimensions and margins of the graph
-  const width = 450
-  const height = 450
+  const width = 1200
+  const height = 800
   
   // append the svg object to the body of the page
   const svg = d3.select("#my_dataviz")
     .append("svg")
-      .attr("width", 450)
-      .attr("height", 450)
+      .attr("width", 1200)
+      .attr("height", 1200)
   
   // create dummy data -> just one element per circle
   const data = [
-    { "name": "A", "group": 1, "value": 100 },
-    { "name": "B", "group": 1, "value": 200 },
-    { "name": "C", "group": 1, "value": 300 },
-    { "name": "D", "group": 1, "value": 400 },
-    { "name": "E", "group": 1, "value": 500 },
-    { "name": "F", "group": 1, "value": 600 },
-    { "name": "G", "group": 2, "value": 700 },
-    { "name": "H", "group": 2, "value": 800 },
-    { "name": "I", "group": 2, "value": 900 },
-    { "name": "J", "group": 2, "value": 1000 },
-    { "name": "K", "group": 2, "value": 1100 },
-    { "name": "L", "group": 2, "value": 1200 },
-    { "name": "M", "group": 3, "value": 1300 },
-    { "name": "N", "group": 3, "value": 1400 },
-    { "name": "O", "group": 3, "value": 1500 }
+  {"name":"1","group":"data_analysis","value":59.5},
+{"name":"2","group":"data_analysis","value":120},
+{"name":"3","group":"data_analysis","value":500},
+{"name":"4","group":"data_analysis","value":113},
+{"name":"5","group":"data_analysis","value":75},
+{"name":"6","group":"data_analysis","value":160},
+{"name":"7","group":"data_analysis","value":102.5},
+{"name":"8","group":"data_analysis","value":78},
+{"name":"9","group":"data_analysis","value":85.5},
+{"name":"10","group":"data_analysis","value":129},
+{"name":"11","group":"data_analysis","value":100},
+{"name":"12","group":"data_analysis","value":65},
+{"name":"13","group":"data_science","value":119.5},
+{"name":"14","group":"data_science","value":62.5},
+{"name":"15","group":"data_science","value":152.5},
+{"name":"16","group":"data_science","value":152.5},
+{"name":"17","group":"data_science","value":119.5},
+{"name":"18","group":"data_science","value":148.5},
+{"name":"19","group":"data_science","value":113},
+{"name":"20","group":"data_science","value":150},
+{"name":"21","group":"data_science","value":350},
+{"name":"22","group":"data_science","value":119.5},
+{"name":"23","group":"data_science","value":125},
+{"name":"24","group":"data_science","value":119.5},
+{"name":"25","group":"data_science","value":62.5},
+{"name":"26","group":"data_science","value":163.5},
+{"name":"27","group":"data_science","value":119.5},
+{"name":"28","group":"data_science","value":122.5},
+{"name":"29","group":"machine_learning","value":152.5},
+{"name":"30","group":"machine_learning","value":236},
+{"name":"31","group":"machine_learning","value":145.5},
+{"name":"32","group":"machine_learning","value":225.5},
+{"name":"33","group":"machine_learning","value":122.5},
+{"name":"34","group":"machine_learning","value":150},
+{"name":"35","group":"machine_learning","value":150},
+{"name":"36","group":"machine_learning","value":199.5},
+{"name":"37","group":"machine_learning","value":196},
+{"name":"38","group":"machine_learning","value":186},
+{"name":"39","group":"machine_learning","value":265.5},
+{"name":"40","group":"machine_learning","value":245},
+{"name":"41","group":"machine_learning","value":175},
+{"name":"42","group":"machine_learning","value":192.5},
+{"name":"43","group":"machine_learning","value":105},
+{"name":"44","group":"machine_learning","value":186},
+{"name":"45","group":"machine_learning","value":133.5},
+{"name":"46","group":"machine_learning","value":90},
+{"name":"47","group":"data_analysis","value":59.5},
+{"name":"48","group":"data_analysis","value":120},
+{"name":"49","group":"data_analysis","value":500},
+{"name":"50","group":"data_analysis","value":113},
+{"name":"51","group":"data_analysis","value":75},
+{"name":"52","group":"data_analysis","value":160},
+{"name":"53","group":"data_analysis","value":102.5},
+{"name":"54","group":"data_analysis","value":78},
+{"name":"55","group":"data_analysis","value":85.5},
+{"name":"56","group":"data_analysis","value":129},
+{"name":"57","group":"data_analysis","value":100},
+{"name":"58","group":"data_analysis","value":65},
+{"name":"59","group":"data_science","value":124},
+{"name":"60","group":"data_science","value":152},
+{"name":"61","group":"data_science","value":112.5},
+{"name":"62","group":"data_science","value":121},
+{"name":"63","group":"data_science","value":229},
+{"name":"64","group":"data_science","value":119.5},
+{"name":"65","group":"data_science","value":117.5},
+{"name":"66","group":"data_science","value":114},
+{"name":"67","group":"data_science","value":220},
+{"name":"68","group":"data_science","value":135},
+{"name":"69","group":"data_science","value":179.5},
+{"name":"70","group":"data_science","value":136.5},
+{"name":"71","group":"data_science","value":121},
+{"name":"72","group":"data_science","value":86},
+{"name":"73","group":"data_science","value":229},
+{"name":"74","group":"data_science","value":156},
+{"name":"75","group":"data_science","value":173.5},
+{"name":"76","group":"data_science","value":96.5},
+{"name":"77","group":"data_science","value":111.5},
+{"name":"78","group":"machine_learning","value":205},
+{"name":"79","group":"machine_learning","value":196},
+{"name":"80","group":"machine_learning","value":286},
+{"name":"81","group":"machine_learning","value":207},
+{"name":"82","group":"machine_learning","value":324.5},
+{"name":"83","group":"machine_learning","value":245},
+{"name":"84","group":"machine_learning","value":192.5},
+{"name":"85","group":"machine_learning","value":199.5},
+{"name":"86","group":"machine_learning","value":207},
+{"name":"87","group":"machine_learning","value":222},
+{"name":"88","group":"machine_learning","value":130},
+{"name":"89","group":"machine_learning","value":152.5},
+{"name":"90","group":"machine_learning","value":159},
+{"name":"91","group":"machine_learning","value":174},
+{"name":"92","group":"machine_learning","value":117},
+{"name":"93","group":"machine_learning","value":205},
+{"name":"94","group":"machine_learning","value":196},
+{"name":"95","group":"machine_learning","value":133.5},
+{"name":"96","group":"machine_learning","value":257},
   ]
   
   // A scale that gives a X target position for each group
   const x = d3.scaleOrdinal()
-    .domain([1, 2, 3])
+    .domain(['data_analysis','data_science','data_science','machine_learning'])
     .range([0, 50, 100])
   
   // A color scale
@@ -101,11 +190,11 @@
   
   // Features of the forces applied to the nodes:
   var simulation = d3.forceSimulation()
-      .force("x", d3.forceX().strength(0.2).x(d => x(d.group)))
-      .force("y", d3.forceY().strength(0.1).y( height/2 ))
+      .force("x", d3.forceX().strength(0.1).x(d => x(d.group)))
+      .force("y", d3.forceY().strength(0.9).y( height/2 ))
       .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
       .force("charge", d3.forceManyBody().strength(1)) // Nodes are attracted one each other of value is > 0
-      .force("collide", d3.forceCollide().strength(.2).radius(function(d){ return (size(d.value)+3) }).iterations(1)) // Force that avoids circle overlapping
+      .force("collide", d3.forceCollide().strength(.1).radius(function(d){ return (size(d.value)+3) }).iterations(1)) // Force that avoids circle overlapping
   // Apply these forces to the nodes and update their positions.
   // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
   simulation
