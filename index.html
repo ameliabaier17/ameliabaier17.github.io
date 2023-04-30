@@ -12,8 +12,8 @@ table, th, td {
 			height: 90vh;
 			width: 100%;
 			display: flex;
-			justify-content: center;
-			align-items: center;
+			/* justify-content: center;
+			align-items: center; */
             padding: 0;
             margin: 0;
         }
@@ -21,6 +21,9 @@ table, th, td {
     background-color: #272b2e; 
     }
 .cell:nth-child(2) {
+    background-color: #67615B; 
+    }
+.cell:nth-child(3) {
     background-color: #67615B; 
     }
   body {
@@ -103,14 +106,12 @@ body {
 </head>
 <body>
 
-  <div class="header" style="margin-bottom: 70;">
+  <!-- <div class="header" style="margin-bottom: 70;">
     <h1>A Visual Outlook on the<br>Data Analysis, Data Science<br>& Machine Learning<br>Job Market</h1>
     <p style="font-size: 18px;">Affiliations: Georgetown University</p>
-  </div>
-  
- 
+  </div> -->
 
-  <div class="content" style="display: flex; justify-content: space-between; margin-bottom: 75px;">
+  <!-- <div class="content" style="display: flex; justify-content: space-between; margin-bottom: 75px;">
   <div style="text-align: center; flex: 1;">
     <p style="font-size: 24px;">Projected Data Analysis Employment Growth<br>for 2021 - 2031</p>
     <h1>23%</h1>
@@ -123,15 +124,53 @@ body {
     <p style="font-size: 24px;">Projected Machine Learning Engineer Employment Growth<br>for 2020 - 2030</p>
     <h1>22%</h1>
   </div>
+</div> -->
+
+</div>
+<div class="cell" style="text-align: center; justify-content: center; align-items: center; ">
+  <h1 style="font-size:60px; color:#EAE0D5;">A Visual Outlook on the<br>Data Analysis, Data Science<br>& Machine Learning<br>Job Market</h1>
+</div>
+
+</div>
+<div class="cell" style="text-align: center;padding-top: 75px; height: 3vh;justify-content: center; align-items: center; ">
+  <h1 style="font-size: 40px; color:#272b2e;">Introduction</h1>
+</div>
+
+<div class="cell" style="padding-left: 90px; ">
+  <p style=" font-size:25px; width:30%; color:#272b2e;justify-content: left; padding-top: 30px;align-items: center;float:left; ">It is no question that jobs in the technology industry are a large part of the U.S. job market.
+    In fact, net technology employment accounts for 7.9% of the total U.S. workforce [FOOTNOTE]. Futhermore, the growth rate 
+  of the technology industry has seen a significant increase since the COVID-19 pandemic. For example, 2019 saw a 
+growth rate of technology jobs of 0.1% while the most recent figure has jumped to 2%. That is a 1900% increase!
+  </p> 
+  <p style=" font-size:25px; width:30%; color:#272b2e;float:right; padding-left: 40px; padding-top: 30px;">When subsetting the different sectors
+    of the technology industry and analyzing their growth, roles that might be of particular interest to students 
+    in the Georgetown's Master's of Data Science program include, but are not limited to, data analysis, data science and 
+    machine learning. The Bureau of Labor Statistics predicts 23%, 36% and 21% in employment growth rate for 2021-2031 in those
+    fields respectively. However, what's really the difference between these three technology job types? 
+</p> 
+</p> 
+<p style=" font-size:25px; width:30%;color:#272b2e; float:right; padding-left: 40px; padding-top: 30px;">There have been many times
+  when family and friends asked the same question, or rather, "what does a data scientist do exactly?" I ask the same question 
+  myself sometimes; especially when starting the job search process since many companies post applications for 
+  these roles that indeed have very similar descriptions. This project has presented the perfect opportunity to dive
+  deeper into the technology job market by visually analyzing web crawling results for data analysis, 
+  data science and machine learning roles posted by companies looking to hire.
+</p> 
 </div>
 
 
 
 <div class="row">
+  <h1 style="color:white; font-size: 40px;  text-align: center;padding-bottom: 0;">Visualization Gallery</h1>
+  <p style="color:white; font-size: 20px; text-align: center; padding-bottom: 25px;padding-top: 0px">
+    This gallery shows various figures used to analyze web crawling results for<br>data analysis, 
+    data science and machine learning roles.<br>Hover and click to read more about each one.</p>
+
+
   <div class="column">
     <div class="image-container" style="text-align: center;">
       <img src="/images/donut2.png" alt="Snow" style="width:100%">
-      <p style="color:white; font-size: 26px;">Interactive Donut Chart</p>
+      <p style="color:white; font-size: 26px;">Job Type Responsibilities</p>
       <div class="overlay">
         <a href="/pages/donut_page.html">Click to see more</a>
       </div>
@@ -140,7 +179,7 @@ body {
   <div class="column">
     <div class="image-container" style="text-align: center;">
       <img src="/images/treemap2.png" alt="Forest" style="width:100%">
-      <p style="color:white; font-size: 26px;">Interactive Treemap</p>
+      <p style="color:white; font-size: 26px;">Job Type Qualifications</p>
       <div class="overlay">
         <a href="/pages/treemap_page.html">Click to see more</a>
       </div>
@@ -149,7 +188,7 @@ body {
   <div class="column">
     <div class="image-container" style="text-align: center;">
       <img src="/images/sankey2.png" alt="Mountains" style="width:100%">
-      <p style="color:white; font-size: 26px;">Interactive Sankey Diagram</p>
+      <p style="color:white; font-size: 26px;">Job Type Remote Status</p>
       <div class="overlay">
         <a href="/pages/sankey_page.html">Click to see more</a>
       </div>
@@ -161,7 +200,7 @@ body {
   <div class="column">
     <div class="image-container" style="text-align: center;">
       <img src="/images/chlor2.png" style="width:100%">
-      <p style="color:white; font-size: 26px;">Interactive Chloropleth Map</p>
+      <p style="color:white; font-size: 26px;">Job Type Location Analysis</p>
       <div class="overlay">
         <a href="/pages/chloropleth_page.html">Click to see more</a>
       </div>
@@ -170,7 +209,7 @@ body {
   <div class="column">
     <div class="image-container" style="text-align: center;">
       <img src="/images/network2.png" alt="Forest" style="width:100%">
-      <p style="color:white; font-size: 26px;">Interactive Network Graph</p>
+      <p style="color:white; font-size: 26px;">Job Type & Company Network</p>
       <div class="overlay">
         <a href="/pages/network_page.html">Click to see more</a>
       </div>
@@ -179,7 +218,7 @@ body {
   <div class="column">
     <div class="image-container" style="text-align: center;">
       <img src="/images/heatmap2.png" alt="Mountains" style="width:100%">
-      <p style="color:white; font-size: 26px;">Interactive Heatmap</p>
+      <p style="color:white; font-size: 26px;">Job Type Schedule Appointment</p>
       <div class="overlay">
         <a href="/pages/heatmap_page.html">Click to see more</a>
       </div>
