@@ -6,6 +6,7 @@
 		body {
 			margin: 0;
 			padding: 0;
+            background-color: #272b2e;
 		}
 		.cell {
 			height: 100vh;
@@ -67,8 +68,23 @@
 	<div class="cell">
 		<iframe src="../images/my_network.html" style="width: 70%; height: 110%; margin: 0; padding: 0;"></iframe>
         <div class="text-container">
-            <h2>Some Text Here</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet consequat ipsum, in iaculis tortor dictum a. Nam auctor tortor nec erat semper, et pretium elit sodales.</p>
+            <p style="font-size: 16px;">Figure 8. This plot shows an interactive network graph of the relationships between job types and company names.</p>
+            <p style="font-size: 18px;">This network graph has many layers for observation. By clicking on the blue nodes, you can see they 
+                 represent data analysis, data science and machine learning job types and all have multiple edges connected to various 
+                company names. The majoriyt of companies are connected to only one of the three nodes, which gives a sense 
+                that their description of those roles may overlap between all three job types as opposed to companies such as Walmart and Deloitte
+                that have edges connected to multiple job types gives me a sense they have distinct responsibilities or departments 
+                laid out for each role. A student can uncover more concise information about these relationships by taking advantage 
+                of the filter. For instance, edges with specific weights might be helpful in understanding the volume 
+                of roles a company is offering for a job type(s). For example, i can select the max edge weight value and observe 
+                that Walmart appears to have 8 roles under the data analysis job type. This makes sense as Walmart is 
+                not considered a tech company but has many clients and business needs where data anlysts would be extremely 
+                useful. A student can also filter by a company of interest. For example, a student may be interested in Facebook 
+                and filter to that company. When doing so, it's apparent that from the web crawling results, they are offering 
+                a machine learning role; logical given that Facebook is a top tech company with a focus on advanced machine learning 
+                algorithms to deploy for their clients. Overall, there are many companies out there looking to hire in data analysis, 
+                data science and machine learning. 
+            </p>
         </div>
     </div>
 </body>
