@@ -8,6 +8,7 @@ table, th, td {
   text-align: center;
   border: 8px solid #272b2e;
 }
+
 .cell {
 			height: 90vh;
 			width: 100%;
@@ -39,6 +40,52 @@ table, th, td {
   body {
     background-color: #272b2e;
   }
+  body {
+  height: 80vh;
+   background: linear-gradient(90deg,#272b2e,#67615B);
+
+}
+
+.slider-thumb::before {
+  position: absolute;
+  content: "";
+  left: 15%;
+  top: 10%;
+  width: 950px;
+  height: 650px;
+  background: #272b2e;
+  border-radius: 92% 100% 82% 35% / 100% 100% 100% 66%;
+  will-change: border-radius, transform, opacity;
+  animation: sliderShape 5s linear infinite;
+  display: block;
+  z-index: -1;
+  -webkit-animation: sliderShape 5s linear infinite;
+}
+@keyframes sliderShape{
+  0%,100%{
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  34%{
+      border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+  }
+  50%{
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  67%{
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+    transform: translate3d(0,-3px,0) rotateZ(0.01deg);
+  }
+}
+
+ 
+
+
+
+
+
+
 * {
   box-sizing: border-box;
 }
@@ -116,32 +163,13 @@ body {
 </head>
 <body>
 
-  <!-- <div class="header" style="margin-bottom: 70;">
-    <h1>A Visual Outlook on the<br>Data Analysis, Data Science<br>& Machine Learning<br>Job Market</h1>
-    <p style="font-size: 18px;">Affiliations: Georgetown University</p>
-  </div> -->
+ 
 
-  <!-- <div class="content" style="display: flex; justify-content: space-between; margin-bottom: 75px;">
-  <div style="text-align: center; flex: 1;">
-    <p style="font-size: 24px;">Projected Data Analysis Employment Growth<br>for 2021 - 2031</p>
-    <h1>23%</h1>
-  </div>
-  <div style="text-align: center; flex: 1;">
-    <p style="font-size: 24px";>Projected Data Science Employment Growth<br>for 2021 - 2031</p>
-    <h1>36%</h1>
-  </div>
-  <div style="text-align: center; flex: 1;">
-    <p style="font-size: 24px;">Projected Machine Learning Engineer Employment Growth<br>for 2020 - 2030</p>
-    <h1>22%</h1>
-  </div>
-</div> -->
-
-</div>
-<div  class="cell" style="text-align: center; justify-content: center; align-items: center; ">
-  <h1 style="font-size:60px; color:#EAE0D5;">A Visual Understanding of the<br>Data Analysis, Data Science<br>& Machine Learning<br>Job Markets</h1>
+<div class="cell" style="text-align: center;height: 90vh; justify-content: center; align-items: center; background-image: url('https://giphy.com/embed/ww9Z3l8wl4szKyRIro'); background-size: cover;">
+  <h1 style="font-size:60px; color:#EAE0D5;">A Visual Navigation of the<br>Data Analysis, Data Science<br>& Machine Learning<br>Job Markets</h1>
 </div>
 
-</div>
+
 <div class="cell" style="text-align: center;padding-top: 75px; height: 3vh;justify-content: center; align-items: center; ">
   <h1 style="font-size: 40px; color:#EAE0D5;">Introduction</h1>
 </div>
@@ -191,11 +219,11 @@ has jumped to 2% <sup>[2]</sup>. That is a 1900% increase!
 <div id="visual-gallery" class="row">
   <h1 style="color:#EAE0D5; font-size: 40px;  text-align: center;padding-bottom: 0;">Visualization Gallery</h1>
   <p style="color:#EAE0D5; font-size: 20px; text-align: center; padding-bottom: 25px;padding-top: 0px">
-    This gallery shows various figures used to analyze web crawling results for<br>data analysis, 
+    This gallery displays various portions of figures used to analyze web crawling <br>results for data analysis, 
     data science and machine learning roles. 
 
     <div style=" width: 35%; margin: auto; font-size: 20px;color:#EAE0D5;text-align: center; border: 3px solid #EAE0D5; ">
-      <p>Hover and click to read more about each one.</p>
+      <p>Hover and click to learn more about each image.</p>
     </div>
     
 
