@@ -40,50 +40,7 @@ table, th, td {
   body {
     background-color: #272b2e;
   }
-  body {
-  height: 80vh;
-   background: linear-gradient(90deg,#272b2e,#67615B);
-
-}
-
-.slider-thumb::before {
-  position: absolute;
-  content: "";
-  left: 15%;
-  top: 10%;
-  width: 950px;
-  height: 650px;
-  background: #272b2e;
-  border-radius: 92% 100% 82% 35% / 100% 100% 100% 66%;
-  will-change: border-radius, transform, opacity;
-  animation: sliderShape 5s linear infinite;
-  display: block;
-  z-index: -1;
-  -webkit-animation: sliderShape 5s linear infinite;
-}
-@keyframes sliderShape{
-  0%,100%{
-  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-    transform: translate3d(0,0,0) rotateZ(0.01deg);
-  }
-  34%{
-      border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
-    transform:  translate3d(0,5px,0) rotateZ(0.01deg);
-  }
-  50%{
-    transform: translate3d(0,0,0) rotateZ(0.01deg);
-  }
-  67%{
-    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
-    transform: translate3d(0,-3px,0) rotateZ(0.01deg);
-  }
-}
-
- 
-
-
-
-
+  
 
 
 * {
